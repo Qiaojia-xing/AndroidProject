@@ -1,5 +1,5 @@
 <searchable xmlns:android="http://schemas.android.com/apk/res/android"
-    android:label="homework10"
+    android:label="18991496乔佳星"
     android:hint="@string/please_input"
     android:inputType="text"
     android:searchButtonText="@string/search" />

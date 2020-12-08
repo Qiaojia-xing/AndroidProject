@@ -1,32 +1,32 @@
 package com.example.homework10;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.viewpager.widget.ViewPager;
-
+import android.annotation.SuppressLint;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.Toolbar;
 
-import java.util.ArrayList;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
 import com.example.homework10.adapter.GoodsPagerAdapter;
 import com.example.homework10.util.DateUtil;
 import com.example.homework10.util.MenuUtil;
 import com.google.android.material.tabs.TabLayout;
-import com.google.android.material.tabs.TabLayout.OnTabSelectedListener;
-import com.google.android.material.tabs.TabLayout.Tab;
 
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.TextView;
-import android.widget.Toast;
+import java.util.ArrayList;
 
-
-public class TabLayoutActivity extends AppCompatActivity implements OnTabSelectedListener {
+public class TabLayoutActivity extends AppCompatActivity implements TabLayout.OnTabSelectedListener {
     private final static String TAG = "TabLayoutActivity";
     private ViewPager vp_content; // 定义一个翻页视图对象
     private TabLayout tab_title; // 定义一个标签布局对象
     private ArrayList<String> mTitleArray = new ArrayList<String>(); // 标题文字队列
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,11 +39,18 @@ public class TabLayoutActivity extends AppCompatActivity implements OnTabSelecte
         setSupportActionBar(tl_head);
         mTitleArray.add("商品");
         mTitleArray.add("详情");
+        mTitleArray.add("评价");
+        mTitleArray.add("推荐");
+
         initTabLayout(); // 初始化标签布局
         initTabViewPager(); // 初始化标签翻页
     }
 
+    private void setSupportActionBar(Toolbar tl_head) {
+    }
+
     // 初始化标签布局
+    @SuppressLint("ResourceType")
     private void initTabLayout() {
         // 从布局文件中获取名叫tab_title的标签布局
         tab_title = findViewById(R.id.tab_title);
@@ -59,6 +66,12 @@ public class TabLayoutActivity extends AppCompatActivity implements OnTabSelecte
         tab_title.addTab(tab_title.newTab().setCustomView(R.drawable.item_toolbar2));
         TextView tv_toolbar2 = findViewById(R.id.tv_toolbar2);
         tv_toolbar2.setText(mTitleArray.get(1));
+        tab_title.addTab(tab_title.newTab().setCustomView(R.drawable.item_toolbar3));
+        TextView tv_toolbar3 = findViewById(R.id.tv_toolbar3);
+        tv_toolbar3.setText(mTitleArray.get(2));
+        tab_title.addTab(tab_title.newTab().setCustomView(R.drawable.item_toolbar4));
+        TextView tv_toolbar4 = findViewById(R.id.tv_toolbar4);
+        tv_toolbar4.setText(mTitleArray.get(3));
         // 给tab_title添加标签选中监听器
         tab_title.addOnTabSelectedListener(this);
     }
@@ -83,17 +96,17 @@ public class TabLayoutActivity extends AppCompatActivity implements OnTabSelecte
     }
 
     // 在标签被重复选中时触发
-    public void onTabReselected(Tab tab) {
+    public void onTabReselected(TabLayout.Tab tab) {
     }
 
     // 在标签选中时触发
-    public void onTabSelected(Tab tab) {
+    public void onTabSelected(TabLayout.Tab tab) {
         // 让vp_content显示指定位置的页面
         vp_content.setCurrentItem(tab.getPosition());
     }
 
     // 在标签取消选中时触发
-    public void onTabUnselected(Tab tab) {
+    public void onTabUnselected(TabLayout.Tab tab) {
     }
 
     @Override

@@ -1,19 +1,12 @@
 package com.example.homework10;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
-import androidx.appcompat.widget.Toolbar;
-
-import android.os.Bundle;
-
-import com.example.homework10.util.DateUtil;
-import com.example.homework10.util.MenuUtil;
-
+import android.annotation.SuppressLint;
 import android.app.SearchManager;
 import android.app.SearchableInfo;
 import android.content.ComponentName;
 import android.content.Context;
 import android.graphics.Color;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -22,7 +15,13 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.AdapterView.OnItemClickListener;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
+import androidx.appcompat.widget.Toolbar;
+
+import com.example.homework10.util.DateUtil;
+import com.example.homework10.util.MenuUtil;
 
 public class SearchViewActivity extends AppCompatActivity {
     private final static String TAG = "SearchViewActivity";
@@ -41,10 +40,11 @@ public class SearchViewActivity extends AppCompatActivity {
         tl_head.setTitle("搜索框页面");
         // 使用tl_head替换系统自带的ActionBar
         setSupportActionBar(tl_head);
-        tv_desc = findViewById(R.id.tv_desc);
+
     }
 
     // 根据菜单项初始化搜索框
+    @SuppressLint("RestrictedApi")
     private void initSearchView(Menu menu) {
         MenuItem menuItem = menu.findItem(R.id.menu_search);
         // 从菜单项中获取搜索框对象
@@ -100,7 +100,7 @@ public class SearchViewActivity extends AppCompatActivity {
             // 设置自动完成编辑框的数组适配器
             sac_key.setAdapter(adapter);
             // 给自动完成编辑框设置列表项的点击监听器
-            sac_key.setOnItemClickListener(new OnItemClickListener() {
+            sac_key.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 // 一旦点击关键词匹配列表中的某一项，就触发点击监听器的onItemClick方法
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     sac_key.setText(((TextView) view).getText());

@@ -1,15 +1,15 @@
 package com.example.homework10.fragment;
 
-import com.example.homework10.R;
-
-import androidx.fragment.app.Fragment;
-
 import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import androidx.fragment.app.Fragment;
+
+import com.example.homework10.R;
 
 public class TabSecondFragment extends Fragment {
     private static final String TAG = "TabSecondFragment";

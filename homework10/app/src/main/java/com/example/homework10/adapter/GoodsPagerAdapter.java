@@ -4,11 +4,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-import java.util.ArrayList;
-
-import com.example.homework10.fragment.BookDetailFragment;
 import com.example.homework10.fragment.BookCoverFragment;
+import com.example.homework10.fragment.BookDetailFragment;
 
+import java.util.ArrayList;
 
 public class GoodsPagerAdapter extends FragmentStatePagerAdapter {
     private ArrayList<String> mTitleArray; // 声明一个标题文字队列
@@ -26,6 +25,7 @@ public class GoodsPagerAdapter extends FragmentStatePagerAdapter {
         } else if (position == 1) { // 第二页展示书籍详情
             return new BookDetailFragment();
         }
+
         return new BookCoverFragment();
     }
 

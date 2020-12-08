@@ -1,10 +1,9 @@
 package com.example.homework10;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class TabThirdActivity extends AppCompatActivity {
 

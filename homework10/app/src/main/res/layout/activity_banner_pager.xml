@@ -1,13 +1,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
     <!-- 自定义的横幅轮播条，需要使用全路径 -->
-    <com.example.group.widget.BannerPager
+    <com.example.homework10.widget.BannerPager
         android:id="@+id/banner_pager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        tools:ignore="MissingClass" />
 
     <TextView
         android:id="@+id/tv_pager"

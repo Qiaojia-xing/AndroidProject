@@ -1,21 +1,21 @@
 package com.example.homework10.widget;
 
-import android.util.Log;
-import android.widget.LinearLayout;
-import com.example.homework10.R;
-import com.example.homework10.util.Utils;
-
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.util.AttributeSet;
+import android.util.Log;
+import android.widget.LinearLayout;
+
+import com.example.homework10.R;
+import com.example.homework10.util.Utils;
 
 public class PagerIndicator extends LinearLayout {
     private static final String TAG = "PagerIndicator";
     private Context mContext; // 声明一个上下文对象
-    private int mCount = 5; // 指示器的个数
+    private int mCount = 6; // 指示器的个数
     private int mPad; // 两个圆点之间的间隔
     private int mSeq = 0; // 当前指示器的序号
     private float mRatio = 0.0f; // 已经移动的距离百分比

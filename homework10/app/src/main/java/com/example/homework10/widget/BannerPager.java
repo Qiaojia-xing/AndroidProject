@@ -1,9 +1,4 @@
 package com.example.homework10.widget;
-import java.util.ArrayList;
-import java.util.List;
-
-import com.example.homework10.R;
-import com.example.homework10.util.Utils;
 
 import android.content.Context;
 import android.os.Handler;
@@ -19,6 +14,12 @@ import android.widget.RelativeLayout;
 
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
+
+import com.example.homework10.R;
+import com.example.homework10.util.Utils;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class BannerPager extends RelativeLayout implements View.OnClickListener {
     private static final String TAG = "BannerPager";

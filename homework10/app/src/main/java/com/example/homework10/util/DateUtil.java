@@ -1,6 +1,5 @@
 package com.example.homework10.util;
 
-import android.annotation.SuppressLint;
 import android.text.TextUtils;
 
 import java.text.SimpleDateFormat;
@@ -43,3 +42,4 @@ public class DateUtil {
         return sdf.format(new_date);
     }
 }
+
