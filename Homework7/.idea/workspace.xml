@@ -6,7 +6,17 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="37d99a61-0d0e-4467-b3eb-bc9daf0b6e38" name="Default Changelist" comment="" />
+    <list default="true" id="37d99a61-0d0e-4467-b3eb-bc9daf0b6e38" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../homework1/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework1/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../homework1/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework1/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../homework1/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework1/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../homework1/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework1/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../homework1/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework1/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homework1/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework1/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../homework1/.idea/modules/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homework1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework1/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homework1/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,7 +44,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1kAeyancuwgCgynCdmHd3nR6ehk" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -48,8 +58,13 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SelectDeploymentTargetsDialog.selectedDevices" value="Pixel_XL_API_25" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/values" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Joe\AndroidProject\Homework7\app\src\main\res\values" />
+    </key>
   </component>
   <component name="RunManager" selected="Android App.LaunchSimpleActivity">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
