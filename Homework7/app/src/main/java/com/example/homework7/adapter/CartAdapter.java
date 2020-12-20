@@ -9,7 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.homework7.MainApplicationT;
+import com.example.homework7.MainApplication;
 import com.example.homework7.R;
 import com.example.homework7.bean.CartInfo;
 
@@ -66,7 +66,7 @@ public class CartAdapter extends BaseAdapter {
 
         CartInfo info = mCartArray.get(position);
         Log.d(TAG, "info.goods.name:"+info.goods.name);
-        holder.iv_thumb.setImageBitmap(MainApplicationT.getInstance().mIconMap.get(info.goods_id)); // 显示商品的图片
+        holder.iv_thumb.setImageBitmap(MainApplication.getInstance().mIconMap.get(info.goods_id)); // 显示商品的图片
         holder.tv_name.setText(info.goods.name); // 显示商品的名称
         holder.tv_desc.setText(info.goods.desc); // 显示商品的描述
         holder.tv_count.setText("" + info.count); // 显示商品的数量

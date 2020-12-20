@@ -14,7 +14,7 @@ import android.widget.RadioGroup;
 
 import androidx.viewpager.widget.PagerAdapter;
 
-import com.example.homework7.MainActivityT;
+import com.example.homework7.MainActivity;
 import com.example.homework7.R;
 
 import java.util.ArrayList;
@@ -52,7 +52,7 @@ public class LaunchSimpleAdapter extends PagerAdapter {
                 btn_start.setOnClickListener(new OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(mContext, MainActivityT.class);
+                        Intent intent = new Intent(mContext, MainActivity.class);
                         mContext.startActivity(intent);
 
                     }

@@ -69,7 +69,7 @@ public class ShoppingCartActivity extends AppCompatActivity implements View.OnCl
     public void onClick(View v) {
         if (v.getId() == R.id.btn_shopping_channel) { // 点击了“商场”按钮
             // 跳转到手机商场页面
-            Intent intent = new Intent(this, MainActivityT.class);
+            Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
         } else if (v.getId() == R.id.btn_settle) { // 点击了“结算”按钮
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -92,7 +92,7 @@ public class ShoppingCartActivity extends AppCompatActivity implements View.OnCl
         int id = item.getItemId();
         if (id == R.id.menu_shopping) { // 点击了菜单项“去商场购物”
             // 跳转到商场页面
-            Intent intent = new Intent(this, MainActivityT.class);
+            Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
         } else if (id == R.id.menu_clear) { // 点击了菜单项“清空购物车”
             // 清空购物车数据库
@@ -227,7 +227,7 @@ public class ShoppingCartActivity extends AppCompatActivity implements View.OnCl
                     0, Utils.dip2px(this, 85), 2);
             iv_thumb.setLayoutParams(iv_params);
             iv_thumb.setScaleType(ImageView.ScaleType.FIT_CENTER);
-            iv_thumb.setImageBitmap(MainApplicationT.getInstance().mIconMap.get(info.goods_id));
+            iv_thumb.setImageBitmap(MainApplication.getInstance().mIconMap.get(info.goods_id));
             ll_row.addView(iv_thumb);
             // 添加商品名称与描述
             LinearLayout ll_name = new LinearLayout(this);

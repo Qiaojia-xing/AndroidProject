@@ -132,7 +132,7 @@ public class ShoppingChannelActivity extends AppCompatActivity implements View.O
         // 获取共享参数保存的是否首次打开参数
         mFirst = SharedUtil.getIntance(this).readShared("first", "true");
         // 获取当前App的私有存储路径
-        String path = MainApplicationT.getInstance().getExternalFilesDir(
+        String path = MainApplication.getInstance().getExternalFilesDir(
                 Environment.DIRECTORY_DOWNLOADS).toString() + "/";
         if (mFirst.equals("true")) { // 如果是首次打开
             ArrayList<GoodsInfo> goodsList = GoodsInfo.getDefaultList();
@@ -143,7 +143,7 @@ public class ShoppingChannelActivity extends AppCompatActivity implements View.O
                 info.rowid = rowid;
                 // 往全局内存写入商品小图
                 Bitmap thumb = BitmapFactory.decodeResource(getResources(), info.thumb);
-                MainApplicationT.getInstance().mIconMap.put(rowid, thumb);
+                MainApplication.getInstance().mIconMap.put(rowid, thumb);
                 String thumb_path = path + rowid + "_s.jpg";
                 FileUtil.saveImage(thumb_path, thumb);
                 info.thumb_path = thumb_path;
@@ -164,7 +164,7 @@ public class ShoppingChannelActivity extends AppCompatActivity implements View.O
                 // 从指定路径读取图片文件的位图数据
                 Bitmap thumb = BitmapFactory.decodeFile(info.thumb_path);
                 // 把该位图对象保存到应用实例的全局变量中
-                MainApplicationT.getInstance().mIconMap.put(info.rowid, thumb);
+                MainApplication.getInstance().mIconMap.put(info.rowid, thumb);
             }
         }
         // 把是否首次打开写入共享参数

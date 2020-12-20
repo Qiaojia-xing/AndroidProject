@@ -13,7 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.homework7.MainApplicationT;
+import com.example.homework7.MainApplication;
 import com.example.homework7.R;
 import com.example.homework7.ShoppingDetailActivity;
 import com.example.homework7.bean.GoodsInfo;
@@ -67,7 +67,7 @@ public class GoodsAdapter extends BaseAdapter implements AdapterView.OnItemClick
         final GoodsInfo info = mGoodsArray.get(position);
         Log.d(TAG, "info.name:"+info.name);
         holder.tv_name.setText(info.name); // 显示商品的名称
-        holder.iv_thumb.setImageBitmap(MainApplicationT.getInstance().mIconMap.get(info.rowid)); // 显示商品的图片
+        holder.iv_thumb.setImageBitmap(MainApplication.getInstance().mIconMap.get(info.rowid)); // 显示商品的图片
         holder.tv_price.setText("" + (int) info.price); // 显示商品的价格
         holder.btn_add.setOnClickListener(new View.OnClickListener() {
             @Override

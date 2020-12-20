@@ -12,12 +12,12 @@ import com.example.homework7.adapter.LaunchSimpleAdapter;
 public class LaunchSimpleActivity extends AppCompatActivity {
     // 声明引导页面的图片数组
     private int[] lanuchImageArray = {R.drawable.phone1,
-            R.drawable.phone2, R.drawable.phone3, R.drawable.Phone4};
+            R.drawable.phone5, R.drawable.phone3, R.drawable.phone4};
 
 
     public void onClick(View v) {
         if (v.getId() == R.id.btn_start) {
-            Intent intent = new Intent(this, MainActivityT.class);
+            Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
         }
     }
